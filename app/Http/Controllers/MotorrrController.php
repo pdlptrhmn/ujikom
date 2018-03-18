@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Yajra\Datatables\Html\Builder;
 use Yajra\Datatables\Datatables;
 use App\Motorrr;
+use App\Tipe;
+use App\Merek;
 
 
 class MotorrrController extends Controller
@@ -55,7 +57,9 @@ class MotorrrController extends Controller
     public function create()
     {
         //
-        return view('motor.create');
+        $tipe = Tipe::all();
+        $merek = Merek::all();
+        return view('motor.create',compact('tipe','merek'));
     }
 
     /**
@@ -69,8 +73,8 @@ class MotorrrController extends Controller
         //
         $motor = new Motorrr();
         $motor->nama = $request->nama;
-        $motor->merk = $request->merek;
-        $motor->tipe = $request->tipe;
+        $motor->mereks_id = $request->mereks_id;
+        $motor->tipes_id = $request->tipes_id;
         $motor->foto = $request->foto;
         if ($request->hasfile('foto')) {
             $motors = $request->file('foto');
@@ -106,8 +110,10 @@ class MotorrrController extends Controller
     public function edit($id)
     {
         //
+        $tipe = Tipe::all();
+        $merek = Merek::all();
         $motor = Motorrr::findOrFail($id);
-        return view('motor.edit', compact('motor'));
+        return view('motor.edit', compact('motor','tipe','merek'));
     }
 
     /**
@@ -122,8 +128,8 @@ class MotorrrController extends Controller
         //
         $motor = Motorrr::findOrFail($id);
         $motor->nama = $request->nama;
-        $motor->merk = $request->merek;
-        $motor->tipe = $request->tipe;
+        $motor->mereks_id = $request->mereks_id;
+        $motor->tipes_id = $request->tipes_id;
         $motor->foto = $request->foto;
         if ($request->hasfile('foto')) {
             $motors = $request->file('foto');

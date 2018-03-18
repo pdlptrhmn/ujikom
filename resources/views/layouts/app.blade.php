@@ -37,7 +37,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
@@ -47,8 +47,8 @@
                     <ul class="nav navbar-nav">
                     @if(Auth::check())
               
-                    <li><a href="{{ route('Motor.index') }}">Motor</li>
-                        <li><a href="{{ route('Keterangan.index') }}">Keterangan</li>
+                    <li><a href="{{ route('Motor.index') }}">Motor</a></li>
+                        <li><a href="{{ route('Keterangan.index') }}">Keterangan</a></li>
 
                    
 

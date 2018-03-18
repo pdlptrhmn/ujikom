@@ -28,8 +28,9 @@
 							@foreach($motor as $data)
 							<tr>
 								<td>{{$data->nama}}</td>
-								<td>{{$data->merk}}</td>
-								<td>{{$data->tipe}}</td>
+								<td>{{$data->mereks->namamerek}}</td>
+								<td>{{$data->tipes->namatipe}}</td>
+								
 								<td><img src="{{ asset('/img/'.$data->foto.'') }}" width="100px" height="100px" ></td>
 								<td><a href="{{route('Motor.edit', $data->id) }}" class="btn btn-primary">Ubah</a></td>
 
@@ -37,7 +38,7 @@
 									<form class="delete" action="{{route('Motor.destroy', $data->id)}}" method="POST">
 										<input type="hidden" name="_method" value="DELETE">
 										<input type="hidden" name="token">
-										<button type="submot" class="btn btn-danger" onclick="return confirm('Anda Yakin Akan Menghapus Data ?');" value="Delete"><i class="glyphicon-trash">Hapus</i></button>
+										<button type="submit" class="btn btn-danger" onclick="return confirm('Anda Yakin Akan Menghapus Data ?');" value="Delete"><i class="fa fa-trash-o"> Hapus</i></button>
 										{{csrf_field()}}
 									</form>
 								</td>

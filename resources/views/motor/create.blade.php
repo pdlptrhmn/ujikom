@@ -27,16 +27,22 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label">Nama<span class="text-danger">*</span></label>
-                <input type="text" name="nama" class="form-control" placeholder=Nama" required="required">
+                <label class="control-label">Nama</label>
+                <input type="text" name="nama" class="form-control" placeholder="" required="">
                 <span class="help-block"></span>
               </div>
             </div>
 
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label">Merek<span class="text-danger">*</span></label>
-                <input type="text" name="merek" class="form-control" placeholder="Nama Lengkap" required="required">
+                <label class="control-label">Merek</label>
+                <select name="mereks_id" class="form-control" required="">
+                      @foreach($merek as $data)
+                      <option value="{{$data->id}}">
+                        {{$data->namamerek}}
+                      </option>
+                      @endforeach
+                    </select>
                 <span class="help-block"></span>
               </div>
             </div>
@@ -44,11 +50,18 @@
 
            <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label">Tipe<span class="text-danger">*</span></label>
-                <input type="text" name="tipe" class="form-control" placeholder="Tipe" required="required">
+                <label class="control-label">Tipe</label>
+                <select name="tipes_id" class="form-control" required="">
+                      @foreach($tipe as $data)
+                      <option value="{{$data->id}}">
+                        {{$data->namatipe}}
+                      </option>
+                      @endforeach
+                    </select>
                 <span class="help-block"></span>
               </div>
             </div>
+
             <div class="col-md-6">
               <div class="form-group">
                 <label class="control-label">Foto<span class="">*</span></label>
@@ -67,7 +80,7 @@
               <hr>
               <div class="pull-right">
                 <button class="btn btn-default btn-bordered waves-effect waves-light" type="reset">Reset</button>
-                <button class="btn btn-primary btn-bordered waves-effect waves-light" type="submit">Simpan</button>
+                <button class="btn btn-primary btn-bordered waves-effect waves-light" type="submit"><i class="fa fa-save"> Simpan</i></button>
               </div>
             </div>
           </div>

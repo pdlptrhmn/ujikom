@@ -14,6 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/merek', function () {
+    return view('front/merek');
+});
+
+Route::get('/tipe', function () {
+    return view('front/tipe');
+});
+
+Route::get('/about', function () {
+    return view('front/about');
+    });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

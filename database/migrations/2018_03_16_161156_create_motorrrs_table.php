@@ -16,8 +16,13 @@ class CreateMotorrrsTable extends Migration
         Schema::create('motorrrs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
-            $table->string('merk');
-            $table->string('tipe');
+            
+            $table->integer('mereks_id')->unsigned();
+            $table->foreign('mereks_id')->references('id')->on('mereks')->onUpdate('cascade')->onDelete('cascade');
+
+            $table->integer('tipes_id')->unsigned();
+            $table->foreign('tipes_id')->references('id')->on('tipes')->onUpdate('cascade')->onDelete('cascade');
+          
             $table->string('foto')->nullable();
 
 

@@ -28,7 +28,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label class="control-label">Keadaan<span class="text-danger">*</span></label>
-                <input type="text" name="keadaan" class="form-control"  required="required">
+                <input type="text" name="keadaan" class="form-control"  required="">
                 <span class="help-block"></span>
               </div>
             </div>
@@ -36,7 +36,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label class="control-label">Transmisi<span class="text-danger">*</span></label>
-                <input type="text" name="transmisi" class="form-control" placeholder="" required="required">
+                <input type="text" name="transmisi" class="form-control" placeholder="" required="">
                 <span class="help-block"></span>
               </div>
             </div>
@@ -45,7 +45,7 @@
            <div class="col-md-6">
               <div class="form-group">
                 <label class="control-label">Bahan Bakar<span class="text-danger">*</span></label>
-                <input type="text" name="bahanbkr" class="form-control" placeholder="Tipe" required="required">
+                <input type="text" name="bahanbkr" class="form-control" placeholder="" required="">
                 <span class="help-block"></span>
               </div>
             </div>
@@ -53,7 +53,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label class="control-label">Tahun Keluar<span class="text-danger">*</span></label>
-                <input type="text" name="thnklr" class="form-control" placeholder="Tipe" required="required">
+                <input type="text" name="thnklr" class="form-control" placeholder="" required="">
                 <span class="help-block"></span>
               </div>
             </div>
@@ -61,7 +61,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label class="control-label">Harga<span class="text-danger">*</span></label>
-                <input type="text" name="harga" class="form-control" placeholder="Tipe" required="required">
+                <input type="text" name="harga" class="form-control" placeholder="" required="">
                 <span class="help-block"></span>
               </div>
             </div>
@@ -69,7 +69,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label class="control-label">Deskripsi<span class="text-danger">*</span></label>
-                <input type="text" name="desk" class="form-control" placeholder="Tipe" required="required">
+                <input type="text" name="desk" class="form-control" placeholder="" required="">
                 <span class="help-block"></span>
               </div>
             </div>
