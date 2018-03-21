@@ -21,9 +21,9 @@
                         
 
                         @php
-                        $motor = App\Motorrr::paginate(3);
+                        $ket = App\Keterrangan::paginate(3);
                         @endphp
-                        @foreach($motor as $data)
+                        @foreach($ket as $data)
                             <div class="agile_top_brands_grids">
                                 <div class="col-md-4 top_brand_left">
                                     <div class="hover14 column">
@@ -35,8 +35,8 @@
                                                 <figure>
                                                     <div class="snipcart-item block" >
                                                         <div class="snipcart-thumb">
-                                                            <a href=#"><img title=" " alt=" " src="{{ asset('/img/'.$data->foto.'') }}" width="150" height="150" /></a>        
-                                                            <p>{{$data->nama}}</p>
+                                                            <a href=#"><img title=" " alt=" " src="{{ asset('/img/'.$data->motorrrs->foto.'') }}" width="150" height="150" /></a>        
+                                                            <p>{{$data->motorrrs->nama}}</p>
                                                             <div class="stars">
                                                                 <i class="fa fa-star blue-star" aria-hidden="true"></i>
                                                                 <i class="fa fa-star blue-star" aria-hidden="true"></i>
@@ -44,7 +44,7 @@
                                                                 <i class="fa fa-star blue-star" aria-hidden="true"></i>
                                                                 <i class="fa fa-star gray-star" aria-hidden="true"></i>
                                                             </div>
-                                                            <h4>$20.99</h4>
+                                                            <h4>{{$data->harga}}</h4>
                                                         </div>
                                                         
                                                         </div>
